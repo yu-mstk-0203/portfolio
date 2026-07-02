@@ -21,108 +21,163 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-inner">
-          <p class="eyebrow">九州在住 / 生成AIパスポート保有</p>
-          <h1>AIで業務を整理し、<br>使える仕組みに。</h1>
+      <section class="hero hero-home">
+        <div class="hero-shade"></div>
+        <div class="container hero-content">
+          <p class="section-kicker light">AI Business Design / Kyushu</p>
+          <h1>AIで、<br>業務を<br>動く仕組みに。</h1>
           <p class="hero-copy">
             市役所との実務実績、記事執筆、<br>
             予約システム構築をもとに、<br>
-            業務整理・Web制作を支援します。
+            業務整理からWeb制作、生成AI活用まで支援します。
           </p>
           <div class="hero-actions" aria-label="主要アクション">
             <a class="button primary" href="contact/">相談する</a>
-            <a class="button secondary" href="works/">実績を見る</a>
+            <a class="button ghost" href="works/">実績を見る</a>
           </div>
+          <dl class="hero-proof" aria-label="公開プロフィール">
+            <div>
+              <dt>License</dt>
+              <dd>生成AIパスポート</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>九州在住</dd>
+            </div>
+            <div>
+              <dt>Works</dt>
+              <dd>実務支援 / 執筆 / 予約システム</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
-      <section class="section intro-section" aria-labelledby="support-title">
-        <div class="section-heading">
-          <p class="eyebrow dark">Support</p>
-          <h2 id="support-title">頼めること</h2>
+      <section class="section light-section" aria-labelledby="problem-title">
+        <div class="container split-heading">
+          <div>
+            <p class="section-kicker">Problems</p>
+            <h2 id="problem-title">業務が進まない原因を、見える形に分解します。</h2>
+          </div>
+          <p>
+            いきなりツールを入れるのではなく、手順、判断基準、例外、担当者の迷いを整理します。
+            そのうえで、AIやWebを「使える仕組み」として組み込みます。
+          </p>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="number">01</span>
+        <div class="container problem-strip" aria-label="よくある課題">
+          <div><span>01</span>手順が属人化している</div>
+          <div><span>02</span>資料が読まれない</div>
+          <div><span>03</span>予約や受付が煩雑</div>
+          <div><span>04</span>AI活用が定着しない</div>
+        </div>
+      </section>
+
+      <section class="section navy-section" aria-labelledby="service-title">
+        <div class="container section-heading invert">
+          <p class="section-kicker light">Services</p>
+          <h2 id="service-title">相談から納品まで、実務に合わせて組み立てます。</h2>
+        </div>
+        <div class="container service-grid">
+          <article class="service-card">
+            <span class="card-number">01</span>
             <h3>業務整理</h3>
-            <p>手順、判断基準、例外処理を言語化し、属人化した作業を引き継げる形に整えます。</p>
+            <p>目的、用語、手順、判断基準を整理し、引き継げる資料と運用へ落とし込みます。</p>
           </article>
-          <article class="feature-card">
-            <span class="number">02</span>
+          <article class="service-card">
+            <span class="card-number">02</span>
             <h3>生成AI活用</h3>
-            <p>AI任せにせず、根拠確認、レビュー、運用ルールまで含めた実務向けの使い方を設計します。</p>
+            <p>AI任せにせず、根拠確認、レビュー、使いどころ、禁止事項まで含めて設計します。</p>
           </article>
-          <article class="feature-card">
-            <span class="number">03</span>
+          <article class="service-card">
+            <span class="card-number">03</span>
             <h3>Web制作</h3>
-            <p>予約、問い合わせ、情報発信など、事業者がすぐ使える静的サイトや業務画面を構築します。</p>
+            <p>予約受付、問い合わせ、実績紹介、業務画面など、すぐ使える形で構築します。</p>
           </article>
         </div>
       </section>
 
-      <section class="section band" aria-labelledby="works-title">
-        <div class="section-heading">
-          <p class="eyebrow dark">Works</p>
-          <h2 id="works-title">公開できる実績</h2>
-          <p>個人情報と守秘情報を伏せ、公開できる範囲で匿名ケース化しています。</p>
+      <section class="section works-section" aria-labelledby="works-title">
+        <div class="container split-heading">
+          <div>
+            <p class="section-kicker">Works</p>
+            <h2 id="works-title">公開できる実績</h2>
+          </div>
+          <p>個人情報や関係先の詳細は伏せ、課題、対応、提供価値が伝わる形で匿名ケース化しています。</p>
         </div>
-        <div class="work-grid">
-          <a class="work-card" href="works/city-office-support/">
-            <p class="tag">市役所との実務実績</p>
-            <h3>現場で使える資料・手順・運用の整理</h3>
-            <p>複雑な手順を、初めて触る人でも迷いにくい形へ整理。</p>
+        <div class="container visual-card-grid">
+          <a class="visual-card" href="works/city-office-support/">
+            <img src="assets/work-office-flow.png" alt="業務整理を表すプロセスカードと資料">
+            <div>
+              <p class="tag">Case 01 / City Office Support</p>
+              <h3>市役所との実務実績</h3>
+              <p>現場で使える資料・手順・運用を整理。</p>
+            </div>
           </a>
-          <a class="work-card" href="works/writing/">
-            <p class="tag">記事執筆</p>
-            <h3>根拠を確認した読みやすい記事制作</h3>
-            <p>生成AIを補助に使いながら、読者目線と事実確認を重視。</p>
+          <a class="visual-card" href="works/writing/">
+            <img src="assets/work-writing-desk.png" alt="記事執筆を表すノートとラップトップ">
+            <div>
+              <p class="tag">Case 02 / Writing</p>
+              <h3>記事執筆・コンテンツ制作</h3>
+              <p>読者目線と根拠確認を重視した制作。</p>
+            </div>
           </a>
-          <a class="work-card" href="works/reservation-system/">
-            <p class="tag">予約システム構築</p>
-            <h3>予約受付と管理を支えるWebの仕組み</h3>
-            <p>日付、商品、受付状態などの業務ロジックを扱う画面を構築。</p>
+          <a class="visual-card" href="works/reservation-system/">
+            <img src="assets/work-reservation-system.png" alt="予約システムを表す抽象的な管理画面">
+            <div>
+              <p class="tag">Case 03 / Reservation System</p>
+              <h3>予約システム構築</h3>
+              <p>受付と管理を支えるWebの仕組み。</p>
+            </div>
           </a>
         </div>
       </section>
 
       <section class="section process-section" aria-labelledby="process-title">
-        <div class="section-heading">
-          <p class="eyebrow dark">Process</p>
-          <h2 id="process-title">進め方</h2>
+        <div class="container section-heading">
+          <p class="section-kicker">Process</p>
+          <h2 id="process-title">小さく作り、確認しながら前へ進めます。</h2>
         </div>
-        <ol class="process-list">
+        <ol class="container process-list">
           <li>
-            <span>1</span>
-            <div>
-              <h3>現状を聞く</h3>
-              <p>困っている作業、使っている資料、止まっている理由を整理します。</p>
-            </div>
+            <span>01</span>
+            <h3>現状を聞く</h3>
+            <p>困っている作業、資料、判断基準、止まっている理由を整理します。</p>
           </li>
           <li>
-            <span>2</span>
-            <div>
-              <h3>小さく作る</h3>
-              <p>いきなり大きな仕組みにせず、使い方が見える試作品から確認します。</p>
-            </div>
+            <span>02</span>
+            <h3>形にする</h3>
+            <p>資料、画面、記事、Web導線など、見て判断できる試作品にします。</p>
           </li>
           <li>
-            <span>3</span>
-            <div>
-              <h3>検証して納品する</h3>
-              <p>表示、操作、文章、公開情報の安全性を確認して、運用できる形で渡します。</p>
-            </div>
+            <span>03</span>
+            <h3>検証して整える</h3>
+            <p>表示、操作、文章、公開情報の安全性を確認し、運用できる形にします。</p>
           </li>
         </ol>
       </section>
 
-      <section class="cta-section" aria-labelledby="cta-title">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="cta-title">業務の整理から相談できます。</h2>
-          <p>Webサイト、記事、予約受付、AI活用など、まだ要件が固まっていない段階でも対応します。</p>
+      <section class="section profile-proof-section" aria-labelledby="profile-proof-title">
+        <div class="container profile-proof">
+          <div>
+            <p class="section-kicker light">Profile Proof</p>
+            <h2 id="profile-proof-title">派手さより、説明できる仕組みを。</h2>
+            <p>
+              生成AIパスポートを保有し、業務整理、記事制作、Web構築を支援しています。
+              公開情報は必要最小限にしながら、依頼前に判断できる実績と進め方を示します。
+            </p>
+          </div>
+          <a class="button primary light" href="about/">プロフィールを見る</a>
         </div>
-        <a class="button primary" href="contact/">相談する</a>
+      </section>
+
+      <section class="cta-section" aria-labelledby="cta-title">
+        <div class="container cta-inner">
+          <div>
+            <p class="section-kicker light">Contact</p>
+            <h2 id="cta-title">業務の整理から相談できます。</h2>
+            <p>Webサイト、記事、予約受付、AI活用など、まだ要件が固まっていない段階でも対応します。</p>
+          </div>
+          <a class="button primary light" href="contact/">相談する</a>
+        </div>
       </section>
     </main>
 
