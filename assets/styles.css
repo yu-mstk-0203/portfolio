@@ -27,8 +27,9 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", system-ui, sans-serif;
-  line-height: 1.75;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.8;
+  font-weight: 500;
   background: var(--mist);
   overflow-x: hidden;
 }
@@ -120,15 +121,18 @@ h1,
 h2,
 h3 {
   letter-spacing: 0;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  word-break: normal;
 }
 
 h1 {
   max-width: 920px;
   margin-bottom: 26px;
   color: var(--white);
-  font-size: clamp(3rem, 7vw, 6.8rem);
-  line-height: 0.98;
-  font-weight: 900;
+  font-size: clamp(2.9rem, 6.6vw, 6.2rem);
+  line-height: 1.04;
+  font-weight: 800;
 }
 
 h2 {
@@ -145,13 +149,23 @@ h3 {
 }
 
 p {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+  word-break: normal;
+}
+
+.headline-line {
+  display: block;
+}
+
+.keep-line {
+  white-space: nowrap;
 }
 
 .section-kicker {
   margin-bottom: 12px;
   color: var(--champagne);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -194,9 +208,9 @@ p {
   color: rgba(255, 255, 255, 0.86);
   font-size: clamp(1.05rem, 2vw, 1.32rem);
   line-height: 1.9;
-  line-break: anywhere;
-  overflow-wrap: anywhere;
-  word-break: break-all;
+  line-break: strict;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .hero-actions,
@@ -261,7 +275,7 @@ p {
 
 .hero-proof dt {
   color: var(--champagne-soft);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -335,7 +349,7 @@ p {
   display: block;
   margin-bottom: 34px;
   color: var(--champagne);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 0.85rem;
   letter-spacing: 0.16em;
 }
@@ -406,7 +420,7 @@ p {
 .tag {
   margin-bottom: 14px;
   color: var(--champagne-soft) !important;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -434,7 +448,7 @@ p {
   display: block;
   margin-bottom: 36px;
   color: var(--champagne);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 1.15rem;
   font-weight: 900;
 }
@@ -452,13 +466,21 @@ p {
 
 .profile-proof,
 .cta-inner {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
 }
 
-.profile-proof > div,
+.profile-proof {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+}
+
+.cta-inner {
+  display: flex;
+}
+
+.profile-proof-copy,
 .cta-inner > div {
   max-width: 760px;
 }
@@ -466,6 +488,34 @@ p {
 .profile-proof p,
 .cta-inner p {
   color: rgba(215, 215, 217, 0.78);
+}
+
+.profile-proof-actions {
+  margin-top: 26px;
+}
+
+.profile-photo-card {
+  margin: 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(215, 215, 217, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(1, 5, 13, 0.28);
+}
+
+.profile-photo-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.profile-photo-card figcaption {
+  margin-top: 10px;
+  color: rgba(215, 215, 217, 0.68);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .navy-section .split-heading > p,
@@ -516,9 +566,9 @@ p {
 .page-hero h1 {
   color: var(--white);
   font-size: clamp(2.45rem, 5vw, 5.6rem);
-  line-break: anywhere;
-  overflow-wrap: anywhere;
-  word-break: break-all;
+  line-break: strict;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .page-hero p {
@@ -530,7 +580,27 @@ p {
   border-top: 1px solid rgba(215, 215, 217, 0.22);
   padding-top: 22px;
   max-width: 100%;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+}
+
+.profile-hero-card {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.profile-hero-card img {
+  width: 112px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid rgba(215, 215, 217, 0.22);
+  border-radius: 8px;
+}
+
+.profile-hero-card p {
+  min-width: 0;
+  margin-bottom: 0;
 }
 
 .case-grid,
@@ -556,9 +626,9 @@ p {
 .contact-card h2 {
   font-size: clamp(1.45rem, 4vw, 2.35rem);
   line-height: 1.22;
-  line-break: anywhere;
-  overflow-wrap: anywhere;
-  word-break: break-all;
+  line-break: strict;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .case-panel + .case-panel {
@@ -610,7 +680,7 @@ p {
 
 .meta-list dt {
   color: var(--champagne);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -645,7 +715,6 @@ p {
 @media (max-width: 900px) {
   .site-header,
   .site-footer,
-  .profile-proof,
   .cta-inner {
     align-items: flex-start;
     flex-direction: column;
@@ -653,6 +722,7 @@ p {
 
   .split-heading,
   .page-hero-inner,
+  .profile-proof,
   .case-grid,
   .contact-layout,
   .about-layout {
@@ -704,7 +774,7 @@ p {
   }
 
   h1 {
-    font-size: clamp(2.45rem, 14vw, 3.55rem);
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
     line-height: 1.04;
   }
 
@@ -713,7 +783,8 @@ p {
   }
 
   .page-hero h1 {
-    font-size: clamp(2.05rem, 10vw, 2.9rem);
+    font-size: clamp(1.9rem, 8vw, 2.35rem);
+    line-height: 1.12;
   }
 
   .case-panel h2,
@@ -723,6 +794,15 @@ p {
 
   .hero-copy {
     font-size: 1rem;
+  }
+
+  .profile-hero-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .profile-hero-card img {
+    width: 112px;
   }
 
   .button {
