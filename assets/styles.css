@@ -185,7 +185,7 @@ p {
 }
 
 .hero-home {
-  background: url("hero-ai-consulting.png") center / cover no-repeat;
+  background: url("hero-ai-consulting.webp") center / cover no-repeat;
 }
 
 .hero-shade {
@@ -592,6 +592,7 @@ p {
 
 .profile-hero-card img {
   width: 112px;
+  height: 112px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 1px solid rgba(215, 215, 217, 0.22);
@@ -753,20 +754,32 @@ p {
   }
 
   .site-header {
+    align-items: stretch;
+    gap: 14px;
     padding-inline: 16px;
   }
 
+  .brand {
+    align-self: flex-start;
+  }
+
   .site-nav {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: 100%;
-    gap: 4px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: auto;
+    max-width: 100%;
+    gap: 8px 28px;
+    text-align: left;
+    font-size: 0.88rem;
   }
 
   .site-nav a {
     min-width: 0;
+    overflow: hidden;
+    text-overflow: clip;
     white-space: nowrap;
+    padding-inline: 2px;
   }
 
   .hero-content {
@@ -803,6 +816,7 @@ p {
 
   .profile-hero-card img {
     width: 112px;
+    height: 112px;
   }
 
   .button {
@@ -814,5 +828,50 @@ p {
   .service-card,
   .process-list li {
     min-height: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .site-header {
+    padding-inline: 12px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-text,
+  .site-nav {
+    font-size: 0.82rem;
+  }
+
+  .site-nav {
+    gap: 8px 22px;
+  }
+
+  .keep-line {
+    white-space: normal;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 11vw, 2.55rem);
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+  }
+
+  .hero-copy,
+  .page-hero p {
+    font-size: 0.94rem;
   }
 }
