@@ -26,10 +26,16 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Prepare static site
+        run: |
+          mkdir -p _site/assets
+          cp index.html 404.html robots.txt .nojekyll _site/
+          cp -R about contact works _site/
+          cp assets/styles.css assets/*.webp _site/assets/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
